@@ -21,11 +21,14 @@ USE `demo`;
 CREATE TABLE IF NOT EXISTS `articoli` (
   `id` int(11) NOT NULL,
   `title` varchar(50) DEFAULT NULL,
+  `author` varchar(50) DEFAULT NULL,
   `text` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- L’esportazione dei dati non era selezionata.
+-- Dump dei dati della tabella demo.articoli: ~0 rows (circa)
+/*!40000 ALTER TABLE `articoli` DISABLE KEYS */;
+/*!40000 ALTER TABLE `articoli` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

@@ -12,8 +12,9 @@ if(isset($_GET['id']))
 <div class="grid-x grid-padding-x">
   <div class="large-6 cell">
   
-    Titolo: <?= $item->title ?>
-    testo: <?= $item->text ?>
+    Titolo: <?= $item->title ?><br />
+    Autore: <?= $item->author ?><br />
+    Testo: <?= $item->text ?>
     <hr>
     <a class="button alert" href='<?= $articolo->urlDelete($item->id); ?>'>Elimina</a>
 

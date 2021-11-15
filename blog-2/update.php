@@ -49,6 +49,8 @@ if(isset($_GET['id'])) {
 
             <label for="titolo">Titolo</label>
             <input class='form-input' type="text" id="titolo" name="titolo" placeholder='Titolo' value='<?= $articolo->titolo?>'>
+            <label for="autore">Autore</label>
+            <input class='form-input' type="text" id="autore" name="autore" placeholder='Autore' value='<?= $articolo->autore?>'>
             <label for="testo">Testo</label>
             <input type="text" id="testo" name="testo" value='<?= $articolo->testo?> placeholder='Testo'>
             <input type="file" name="upload" id="upload">

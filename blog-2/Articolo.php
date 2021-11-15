@@ -3,6 +3,7 @@
 class Articolo {
 
     private $title;
+    private $autore;
     private $text;
     private $id;
     private $image;
@@ -48,7 +49,7 @@ class Articolo {
     public function store($articolo) {
         $connection = new Connection();
         // attenzione questo codice è rischioso per la sicurezza
-        $sql = "INSERT INTO articoli( title, text ) VALUES ('" . $articolo['titolo'] . "', '" . $articolo['testo'] . "')";
+        $sql = "INSERT INTO articoli( title, author, text ) VALUES ('" . $articolo['titolo'] . "', '" . $articolo['autore'] . "', '" . $articolo['testo'] . "')";
         $connection->query($sql);
         $connection->close();
     }
@@ -64,7 +65,7 @@ class Articolo {
     public function delete($id) {
         $connection = new Connection();
         // attenzione questo codice è rischioso per la sicurezza
-        $result = $connection->query("DELETE  FROM articoli WHERE id='$id'");
+        $result = $connection->query("DELETE FROM articoli WHERE id='$id'");
         $connection->close();
         return $result;
     }

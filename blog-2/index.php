@@ -25,7 +25,9 @@ $lista = $articolo->lista();
   <div class="large-6 cell">
   <?php while($obj = $lista->fetch_object()): ?>
     
-    <a href='<?= $articolo->urlView($obj->id) ?> '> <?= $obj->title ?> </a>
+    <a href='<?= $articolo->urlView($obj->id) ?>'>
+      <b><?= $obj->title ?></b> di <?= $obj->author ?>
+    </a>
     <hr>
     <?php endwhile; ?>
   </div>

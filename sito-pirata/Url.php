@@ -5,8 +5,6 @@ class Url
     const HOME = "index.php";
     const ADD = "form.php";
     const RESET = self::HOME . "?reset=";
-    const ELENCO_SOFTWARE = self::HOME . "?filter=software";
-    const ELENCO_CLIENTI = self::HOME . "?filter=clienti";
 
     public static function toHome()
     {
@@ -24,11 +22,11 @@ class Url
     }
 
     public static function viewSoftware($tipo) {
-        return self::ELENCO_SOFTWARE . "&tipo=" . $tipo;
+        return self::HOME . "?tipo=" . $tipo;
     }
 
     public static function viewClienti($professione) {
-        return self::ELENCO_CLIENTI . "&professione=" . $professione;
+        return self::HOME . "?professione=" . $professione;
     }
 }
 

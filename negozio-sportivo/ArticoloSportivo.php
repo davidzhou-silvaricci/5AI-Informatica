@@ -1,6 +1,6 @@
 <?php
 
-class Articolo
+class ArticoloSportivo
 {
     private $id;
     private $nome;
@@ -18,7 +18,7 @@ class Articolo
         $connection->close();
         */
         $sql = "INSERT INTO articoli( nome, quantita, prezzo ) VALUES (?, ? ,?)";
-        $this->connect($sql, "sid", [$articolo["nome"], $articolo["quantita"], $articolo["prezzo"]], false);
+        $this->connect($sql, "sid", [$articolo["nome"], $articolo["quantita"], number_format($articolo["prezzo"], 2)], false);
     }
 
     public function load($id)

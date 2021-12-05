@@ -31,7 +31,7 @@ include("autoloader.php");
         <?php // fine ciclo ?>
         <?php if (true) : ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin uk-text-center">
-                <p>Nessun articolo da visualizzare</p>
+                <p>Nessun elemento da visualizzare</p>
             </div>
         <?php endif; ?>
     </div>

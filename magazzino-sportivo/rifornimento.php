@@ -15,7 +15,7 @@ $lista = ArticoloSportivo::getDaRifornire();
 <html lang="en">
 
 <head>
-    <title>Rifornimento - Negozio sportivo</title>
+    <title>Rifornimento - Magazzino sportivo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit.min.css" />

@@ -4,7 +4,7 @@
 class Connection
 {
 
-    const DB = "negozio-sportivo";
+    const DB = "magazzino-sportivo";
     const DB_HOST = "127.0.0.1";
     const DB_USER = "root";
     const DB_PASSWORD = "";

@@ -27,7 +27,7 @@ $lista = $articolo->getArticoli();
 <html lang="en">
 
 <head>
-    <title>Negozio sportivo</title>
+    <title>Magazzino sportivo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit.min.css" />

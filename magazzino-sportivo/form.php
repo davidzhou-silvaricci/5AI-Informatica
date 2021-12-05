@@ -8,7 +8,7 @@ include("autoloader.php");
 <html lang="en">
 
 <head>
-    <title>Aggiungi un articolo - Negozio sportivo</title>
+    <title>Aggiungi un articolo - Magazzino sportivo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit.min.css" />

@@ -14,8 +14,8 @@
 
 
 -- Dump della struttura del database negozio-sportivo
-CREATE DATABASE IF NOT EXISTS `negozio-sportivo` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
-USE `negozio-sportivo`;
+CREATE DATABASE IF NOT EXISTS `magazzino-sportivo` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
+USE `magazzino-sportivo`;
 
 -- Dump della struttura di tabella negozio-sportivo.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (

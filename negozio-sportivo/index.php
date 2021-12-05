@@ -4,10 +4,20 @@ include("autoloader.php");
 
 $articolo = new ArticoloSportivo();
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["submit"]))
     $articolo->add($_POST);
-    unset($_POST);
-}
+
+if (isset($_POST["update"]))
+    $articolo->update($_POST["quantita"], $_POST["id"]);
+
+if (isset($_GET["sell"]))
+    $articolo->sell($_GET["sell"]);
+
+if (isset($_GET["delete"]))
+    $articolo->delete($_GET["delete"]);
+
+if (isset($_GET["reset"]))
+    $articolo->reset();
 
 $lista = $articolo->getArticoli();
 
@@ -26,17 +36,30 @@ $lista = $articolo->getArticoli();
 
 <body>
     <div class="uk-container uk-container-xsmall uk-padding-large">
-        <a class="uk-button uk-button-default uk-width-1-1 uk-margin" href="<?= Url::toForm() ?>">Aggiungi un articolo</a>
+        <div class="uk-flex">
+            <a class="uk-button uk-button-default uk-button-large uk-width-1-1" href="<?= Url::toReset() ?>">Svuota</a>
+            <a class="uk-button uk-button-default uk-button-large uk-width-1-1 uk-margin-left" href="<?= Url::toRifornimento() ?>">Rifornimento</a>
+            <a class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-left" href="<?= Url::toForm() ?>">Aggiungi</a>
+        </div>
         <?php while ($obj = $lista->fetch_object()) : ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin">
                 <div class="uk-card-badge uk-label">€ <?= $obj->prezzo ?></div>
                 <h3 class="uk-card-title"><?= $obj->nome ?></h3>
                 <p>Quantità disponibile: <?= $obj->quantita ?></p>
-                <a href="#" class="uk-button uk-button-small uk-button-primary">Diminuisci</a>
-                <a href="#" class="uk-button uk-button-small uk-button-secondary">Modifica</a>
-                <a href="#" class="uk-button uk-button-small uk-button-default">Elimina</a>
+                <?php if ($obj->quantita != 0) : ?>
+                    <a href="<?= Url::urlSell($obj->id_articolo) ?>" class="uk-button uk-button-primary">Diminuisci</a>
+                <?php else : ?>
+                    <button class="uk-button uk-button-default" disabled>Non disponibile</button>
+                <?php endif; ?>
+                <a href="<?= Url::urlUpdate($obj->id_articolo, true) ?>" class="uk-button uk-button-default uk-margin-small-left">Modifica</a>
+                <a href="<?= Url::urlDelete($obj->id_articolo) ?>" class="uk-button uk-button-default uk-margin-small-left">Elimina</a>
             </div>
         <?php endwhile; ?>
+        <?php if ($lista->num_rows === 0) : ?>
+            <div class="uk-card uk-card-default uk-card-body uk-margin uk-text-center">
+                <p>Nessun articolo da visualizzare</p>
+            </div>
+        <?php endif; ?>
     </div>
 
     <script>

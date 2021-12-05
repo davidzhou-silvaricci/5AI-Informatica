@@ -2,6 +2,11 @@
 
 include("autoloader.php");
 
+$articolo = new ArticoloSportivo();
+
+if (isset($_GET["id"]))
+    $obj = $articolo->load($_GET["id"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,27 +23,28 @@ include("autoloader.php");
 <body>
     <div class="uk-container uk-container-xsmall uk-padding-large">
         <form method="POST" action="<?= Url::toHome() ?>" class="uk-form-horizontal uk-margin">
+            <input type="hidden" id="id" name="id" value="<?= $obj->id_articolo ?>">
             <div class="uk-margin">
                 <label class="uk-form-label" for="nome">Nome</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="nome" name="nome" type="text" placeholder="Articolo sportivo" required>
+                    <input class="uk-input" id="nome" name="nome" type="text" placeholder="Articolo sportivo" value="<?= $obj->nome ?>" disabled required>
                 </div>
             </div>
             <div class="uk-margin">
                 <label class="uk-form-label" for="quantita">Quantità</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="quantita" name="quantita" type="number" value="0" min="0" required>
+                    <input class="uk-input" id="quantita" name="quantita" type="number" value="<?= $obj->quantita ?>" min="0" required>
                 </div>
             </div>
             <div class="uk-margin">
                 <label class="uk-form-label" for="prezzo">Prezzo (€)</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="prezzo" name="prezzo" type="number" value="0.00" min="0" step="0.01" required>
+                    <input class="uk-input" id="prezzo" name="prezzo" type="number" value="<?= $obj->prezzo ?>"  min="0" step="0.01" disabled required>
                 </div>
             </div>
             <div class="uk-flex uk-flex-row uk-margin-medium">
-                <a class="uk-button uk-button-default uk-button-large uk-width-1-2@s" href="<?= Url::toHome() ?>">Indietro</a>
-                <input class="uk-button uk-button-primary uk-button-large uk-width-1-2@s uk-margin-left" type="submit" name="submit" value="Aggiungi">
+                <a class="uk-button uk-button-default uk-button-large uk-width-1-2@s" href="<?= Url::toHome() ?>">Annulla</a>
+                <input class="uk-button uk-button-primary uk-button-large uk-width-1-2@s uk-margin-left" type="submit" name="update" value="Modifica">
             </div>
         </form>
     </div>

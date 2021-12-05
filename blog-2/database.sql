@@ -14,8 +14,8 @@
 
 
 -- Dump della struttura del database demo
-CREATE DATABASE IF NOT EXISTS `demo` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `demo`;
+CREATE DATABASE IF NOT EXISTS `blog` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `blog`;
 
 -- Dump della struttura di tabella demo.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (

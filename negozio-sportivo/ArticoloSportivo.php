@@ -9,48 +9,35 @@ class ArticoloSportivo
 
     public function add($articolo)
     {
-        /*
-        $connection = new Connection();
-        $sql = "INSERT INTO articoli( nome, quantita, prezzo ) VALUES (?, ? ,?)";
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param("sid", $articolo["nome"], $articolo["quantita"], $articolo["prezzo"]);
-        $stmt->execute();
-        $connection->close();
-        */
-        $sql = "INSERT INTO articoli( nome, quantita, prezzo ) VALUES (?, ? ,?)";
-        $this->connect($sql, "sid", [$articolo["nome"], $articolo["quantita"], number_format($articolo["prezzo"], 2)], false);
+        $sql = "INSERT INTO articoli(nome, quantita, prezzo) VALUES (?, ? ,?)";
+        $this->connect($sql, "sid", [$articolo["nome"], $articolo["quantita"], $articolo["prezzo"]]);
+    }
+
+    public function sell($id)
+    {
+        $articolo = $this->load($id);
+        $quantita = $articolo->quantita;
+
+        if ($quantita > 0) $quantita--;
+        $this->update($quantita, $id);
+    }
+
+    public function update($quantita, $id)
+    {
+        $sql = "UPDATE articoli SET quantita=? WHERE id_articolo=?";
+        $this->connect($sql, "ii", [$quantita, $id]);
     }
 
     public function load($id)
     {
-        /*
-        $connection = new Connection();
-        $sql = "SELECT * FROM articoli WHERE id=?";
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $connection->close();
-
-        return $stmt->get_result()->fetch_object();
-        */
-        $sql = "SELECT * FROM articoli WHERE id=?";
-        $this->connect($sql, "i", [$id], true);
+        $sql = "SELECT * FROM articoli WHERE id_articolo=?";
+        return $this->connect($sql, "i", [$id])->fetch_object();
     }
 
     public function delete($id)
     {
-        /*
-        $connection = new Connection();
-        $sql = "DELETE FROM articoli WHERE id=?";
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $connection->close();
-
-        return $stmt->get_result()->fetch_object();
-        */
-        $sql = "DELETE FROM articoli WHERE id=?";
-        $this->connect($sql, "i", [$id], true);
+        $sql = "DELETE FROM articoli WHERE id_articolo=?";
+        return $this->connect($sql, "i", [$id]);
     }
 
     public static function reset()
@@ -60,25 +47,37 @@ class ArticoloSportivo
         $connection->close();
     }
 
-    public static function getArticoli()
+    public static function getDaRifornire()
     {
         $connection = new Connection();
-        $sql = "SELECT * FROM articoli";
+        $sql = "SELECT * FROM articoli WHERE quantita <= 3 ORDER BY quantita ASC";
         $result = $connection->query($sql);
         $connection->close();
 
         return $result;
     }
 
-    private function connect($query, $types, $params, $return)
+    public static function getArticoli()
+    {
+        $connection = new Connection();
+        $sql = "SELECT * FROM articoli ORDER BY id_articolo DESC";
+        $result = $connection->query($sql);
+        $connection->close();
+
+        return $result;
+    }
+
+    private function connect($query, $types, $params)
     {
         $connection = new Connection();
         $stmt = $connection->prepare($query);
         $stmt->bind_param($types, ...$params);
         $stmt->execute();
+        $result = $stmt->get_result();
+        // Chiudo il prepare e la connessione
+        $stmt->close();
         $connection->close();
 
-        if($return === true)
-            return $stmt->get_result();
+        return $result;
     }
 }

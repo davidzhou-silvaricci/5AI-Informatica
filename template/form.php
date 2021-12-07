@@ -18,16 +18,36 @@ include("autoloader.php");
 <body>
     <div class="uk-container uk-container-xsmall uk-padding-large">
         <form method="POST" action="<?= Url::toHome() ?>" class="uk-form-horizontal uk-margin">
+            <!-- Text -->
             <div class="uk-margin">
-                <label class="uk-form-label" for=""></label>
+                <label class="uk-form-label" for="">Text</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="" name="" type="text" required>
+                    <input type="text" class="uk-input" id="" name="" placeholder="" required>
                 </div>
             </div>
+            <!-- Number -->
             <div class="uk-margin">
-                <label class="uk-form-label" for=""></label>
+                <label class="uk-form-label" for="">Number</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="" name="" type="number" required>
+                    <input type="number" class="uk-input" id="" name="" placeholder="" required>
+                </div>
+            </div>
+            <!-- Select -->
+            <div class="uk-margin">
+                <label class="uk-form-label" for="">Select</label>
+                <div class="uk-form-controls">
+                    <select class="uk-select" id="" name="" required>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <!-- Textarea -->
+            <div class="uk-margin">
+                <label class="uk-form-label" for="">Textarea</label>
+                <div class="uk-form-controls">
+                    <textarea class="uk-textarea" id="" name="" rows="2" maxlength="100" placeholder="" required></textarea>
                 </div>
             </div>
             <div class="uk-flex uk-flex-row uk-margin-medium">

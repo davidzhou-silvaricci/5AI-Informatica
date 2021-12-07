@@ -2,5 +2,5 @@
 
 class Classe
 {
-    private $var;
+    private $variabile;
 }

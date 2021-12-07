@@ -13,11 +13,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dump della struttura del database negozio-sportivo
+-- Dump della struttura del database magazzino-sportivo
 CREATE DATABASE IF NOT EXISTS `magazzino-sportivo` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
 USE `magazzino-sportivo`;
 
--- Dump della struttura di tabella negozio-sportivo.articoli
+-- Dump della struttura di tabella magazzino-sportivo.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (
   `id_articolo` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) COLLATE armscii8_bin DEFAULT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `articoli` (
   PRIMARY KEY (`id_articolo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dump dei dati della tabella negozio-sportivo.articoli: ~0 rows (circa)
+-- Dump dei dati della tabella magazzino-sportivo.articoli: ~0 rows (circa)
 /*!40000 ALTER TABLE `articoli` DISABLE KEYS */;
 /*!40000 ALTER TABLE `articoli` ENABLE KEYS */;
 

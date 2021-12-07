@@ -26,16 +26,10 @@ CREATE TABLE IF NOT EXISTS `interventi` (
   `scontato` int(11) NOT NULL,
   `nota` varchar(50) COLLATE armscii8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dump dei dati della tabella impresa.interventi: ~7 rows (circa)
+-- Dump dei dati della tabella impresa.interventi: ~0 rows (circa)
 /*!40000 ALTER TABLE `interventi` DISABLE KEYS */;
-INSERT INTO `interventi` (`id`, `tecnico`, `durata`, `parcella`, `scontato`, `nota`) VALUES
-	(10, 'Mario', 123, 124, 87, 'awd'),
-	(11, 'Luca', 3215, 112, 78, ''),
-	(12, 'Mario', 12, 12, 0, ''),
-	(13, 'Mario', 12, 215, 0, ''),
-	(14, 'Mario', 2, 10553, 0, '');
 /*!40000 ALTER TABLE `interventi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

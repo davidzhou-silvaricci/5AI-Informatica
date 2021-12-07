@@ -13,11 +13,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dump della struttura del database demo
+-- Dump della struttura del database blog
 CREATE DATABASE IF NOT EXISTS `blog` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `blog`;
 
--- Dump della struttura di tabella demo.articoli
+-- Dump della struttura di tabella blog.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (
   `id` int(11) NOT NULL,
   `title` varchar(50) DEFAULT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `articoli` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella demo.articoli: ~0 rows (circa)
+-- Dump dei dati della tabella blog.articoli: ~0 rows (circa)
 /*!40000 ALTER TABLE `articoli` DISABLE KEYS */;
 /*!40000 ALTER TABLE `articoli` ENABLE KEYS */;
 

@@ -1,9 +1,7 @@
 <?php
 
-
 class Connection
 {
-
     const DB = "nome-database";
     const DB_HOST = "127.0.0.1";
     const DB_USER = "root";

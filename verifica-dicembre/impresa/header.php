@@ -1,5 +1,8 @@
 <?php
-include("autoloader.php");
+
+if(!isset($_SESSION))
+  include("autoloader.php");
+
 ?>
 
 <!doctype html>

@@ -24,7 +24,7 @@ if (isset($_GET["id"])) {
 
 <body>
     <div class="uk-container uk-container-xsmall uk-padding-large">
-        <?php if ($obj !== false) : ?>
+        <?php if ($obj !== null) : ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin-medium">
                 <div class="uk-card-badge">
                     <span class="uk-label">€ <?= number_format((float) $obj->importo, 2, ',', '.') ?></span>
@@ -48,6 +48,7 @@ if (isset($_GET["id"])) {
         <?php else : ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin uk-text-center">
                 <p>Nessuna donazione da visualizzare</p>
+                <a href="<?= Url::toHome() ?>" class="uk-button uk-button-default">Indietro</a>
             </div>
         <?php endif; ?>
     </div>

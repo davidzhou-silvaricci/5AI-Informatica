@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `registro-donazioni`
+-- Database: `my_registro_donazioni`
 --
-CREATE DATABASE IF NOT EXISTS `registro-donazioni` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `registro-donazioni`;
+CREATE DATABASE IF NOT EXISTS `my_registro_donazioni` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `my_registro_donazioni`;
 
 -- --------------------------------------------------------
 

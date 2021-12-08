@@ -13,24 +13,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dump della struttura del database impresa
-CREATE DATABASE IF NOT EXISTS `impresa` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
-USE `impresa`;
+-- Dump della struttura del database my_blog
+CREATE DATABASE IF NOT EXISTS `my_blog` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `my_blog`;
 
--- Dump della struttura di tabella impresa.interventi
-CREATE TABLE IF NOT EXISTS `interventi` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tecnico` varchar(50) COLLATE armscii8_bin NOT NULL DEFAULT '',
-  `durata` int(11) NOT NULL DEFAULT 0,
-  `parcella` int(11) NOT NULL DEFAULT 0,
-  `scontato` int(11) NOT NULL,
-  `nota` varchar(50) COLLATE armscii8_bin NOT NULL,
+-- Dump della struttura di tabella my_blog.articoli
+CREATE TABLE IF NOT EXISTS `articoli` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `author` varchar(50) DEFAULT NULL,
+  `text` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella impresa.interventi: ~0 rows (circa)
-/*!40000 ALTER TABLE `interventi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `interventi` ENABLE KEYS */;
+-- Dump dei dati della tabella my_blog.articoli: ~0 rows (circa)
+/*!40000 ALTER TABLE `articoli` DISABLE KEYS */;
+/*!40000 ALTER TABLE `articoli` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

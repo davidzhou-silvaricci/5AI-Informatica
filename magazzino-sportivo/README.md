@@ -5,12 +5,14 @@
 Un negozio di articoli sportivi ha bisogno di un sistema informatico per gestire il proprio magazzino.
 
 **Oltre a permettere l'inserimento di un nuovo articolo sportivo:**
+
 - Nome
 - Codice univoco
 - Quantità
 - Prezzo
 
 **Il sistema deve consentire, tramite un semplice pulsante:**
+
 - La rimozione di una unità dal totale (se maggiore di 0)
 - Altrimenti mostrare la scritta *Non disponibile*.
 

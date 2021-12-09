@@ -2,7 +2,7 @@
 
 include("autoloader.php");
 
-$articolo = new ArticoloSportivo();
+$articolo = new Articolo();
 
 if (isset($_POST["submit"]))
     $articolo->add($_POST);
@@ -47,12 +47,12 @@ $lista = $articolo->getArticoli();
                 <h3 class="uk-card-title"><?= $obj->nome ?></h3>
                 <p>Quantità disponibile: <?= $obj->quantita ?></p>
                 <?php if ($obj->quantita != 0) : ?>
-                    <a href="<?= Url::urlSell($obj->id_articolo) ?>" class="uk-button uk-button-primary">Diminuisci</a>
+                    <a href="<?= Url::urlSell($obj->id) ?>" class="uk-button uk-button-primary">Diminuisci</a>
                 <?php else : ?>
                     <button class="uk-button uk-button-default" disabled>Non disponibile</button>
                 <?php endif; ?>
-                <a href="<?= Url::urlUpdate($obj->id_articolo, true) ?>" class="uk-button uk-button-default uk-margin-small-left">Modifica</a>
-                <a href="<?= Url::urlDelete($obj->id_articolo) ?>" class="uk-button uk-button-default uk-margin-small-left">Elimina</a>
+                <a href="<?= Url::urlUpdate($obj->id, true) ?>" class="uk-button uk-button-default uk-margin-small-left">Modifica</a>
+                <a href="<?= Url::urlDelete($obj->id) ?>" class="uk-button uk-button-default uk-margin-small-left">Elimina</a>
             </div>
         <?php endwhile; ?>
         <?php if ($lista->num_rows === 0) : ?>

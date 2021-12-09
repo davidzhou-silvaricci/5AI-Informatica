@@ -1,6 +1,6 @@
 <?php
 
-class ArticoloSportivo
+class Articolo
 {
     private $id;
     private $nome;
@@ -24,19 +24,19 @@ class ArticoloSportivo
 
     public function update($quantita, $id)
     {
-        $sql = "UPDATE articoli SET quantita=? WHERE id_articolo=?";
+        $sql = "UPDATE articoli SET quantita=? WHERE id=?";
         $this->connect($sql, "ii", [$quantita, $id]);
     }
 
     public function load($id)
     {
-        $sql = "SELECT * FROM articoli WHERE id_articolo=?";
+        $sql = "SELECT * FROM articoli WHERE id=?";
         return $this->connect($sql, "i", [$id])->fetch_object();
     }
 
     public function delete($id)
     {
-        $sql = "DELETE FROM articoli WHERE id_articolo=?";
+        $sql = "DELETE FROM articoli WHERE id=?";
         return $this->connect($sql, "i", [$id]);
     }
 
@@ -60,7 +60,7 @@ class ArticoloSportivo
     public static function getArticoli()
     {
         $connection = new Connection();
-        $sql = "SELECT * FROM articoli ORDER BY id_articolo DESC";
+        $sql = "SELECT * FROM articoli ORDER BY id DESC";
         $result = $connection->query($sql);
         $connection->close();
 

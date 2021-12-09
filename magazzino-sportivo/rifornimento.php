@@ -2,12 +2,12 @@
 
 include("autoloader.php");
 
-$articolo = new ArticoloSportivo();
+$articolo = new Articolo();
 
 if (isset($_GET["id"]))
     $articolo->update(10, $_GET["id"]);
 
-$lista = ArticoloSportivo::getDaRifornire();
+$lista = Articolo::getDaRifornire();
 
 ?>
 
@@ -32,9 +32,9 @@ $lista = ArticoloSportivo::getDaRifornire();
                 <div class="uk-card-badge uk-label">€ <?= $obj->prezzo ?></div>
                 <h3 class="uk-card-title"><?= $obj->nome ?></h3>
                 <p>Quantità disponibile: <?= $obj->quantita ?></p>
-                <a href="<?= Url::urlUpdate($obj->id_articolo, false) ?>" class="uk-button uk-button-primary">Rifornisci</a>
-                <a href="<?= Url::urlUpdate($obj->id_articolo, true) ?>" class="uk-button uk-button-default uk-margin-small-left">Modifica</a>
-                <a href="<?= Url::urlDelete($obj->id_articolo) ?>" class="uk-button uk-button-default uk-margin-small-left">Elimina</a>
+                <a href="<?= Url::urlUpdate($obj->id, false) ?>" class="uk-button uk-button-primary">Rifornisci</a>
+                <a href="<?= Url::urlUpdate($obj->id, true) ?>" class="uk-button uk-button-default uk-margin-small-left">Modifica</a>
+                <a href="<?= Url::urlDelete($obj->id) ?>" class="uk-button uk-button-default uk-margin-small-left">Elimina</a>
             </div>
         <?php endwhile; ?>
         <?php if ($lista->num_rows === 0) : ?>

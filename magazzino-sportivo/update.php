@@ -2,7 +2,7 @@
 
 include("autoloader.php");
 
-$articolo = new ArticoloSportivo();
+$articolo = new Articolo();
 
 if (isset($_GET["id"]))
     $obj = $articolo->load($_GET["id"]);
@@ -23,7 +23,7 @@ if (isset($_GET["id"]))
 <body>
     <div class="uk-container uk-container-xsmall uk-padding-large">
         <form method="POST" action="<?= Url::toHome() ?>" class="uk-form-horizontal uk-margin">
-            <input type="hidden" id="id" name="id" value="<?= $obj->id_articolo ?>">
+            <input type="hidden" id="id" name="id" value="<?= $obj->id ?>">
             <div class="uk-margin">
                 <label class="uk-form-label" for="nome">Nome</label>
                 <div class="uk-form-controls">

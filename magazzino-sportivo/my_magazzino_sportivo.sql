@@ -19,11 +19,11 @@ USE `my_magazzino_sportivo`;
 
 -- Dump della struttura di tabella my_magazzino_sportivo.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (
-  `id_articolo` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) COLLATE armscii8_bin DEFAULT NULL,
   `quantita` int(11) DEFAULT NULL,
   `prezzo` float DEFAULT NULL,
-  PRIMARY KEY (`id_articolo`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Dump dei dati della tabella my_magazzino_sportivo.articoli: ~0 rows (circa)

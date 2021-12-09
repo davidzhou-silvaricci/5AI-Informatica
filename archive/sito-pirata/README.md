@@ -20,5 +20,3 @@ Una banda di hackers commercializza abusivamente software di vario tipo: sistemi
 
 - Q1) Elenco del software per singola tipologia
 - Q2) Elenco dei clienti per singola professione
-
-Reminder: in Connection.php eliminare riga 24 e 25; in altre parole nella funzione query() elimianre print_r e die.

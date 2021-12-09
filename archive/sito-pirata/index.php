@@ -1,7 +1,7 @@
 <?php
+
 include('autoloader.php');
 
-// Se ricevo il parametro tipo, filtro, se professione, porto ad una nuova pagina (?)
 ?>
 
 <!DOCTYPE html>
@@ -25,28 +25,25 @@ include('autoloader.php');
         <hr class="my-2" />
         <div class="flex flex-col gap-2 px-4 py-2 text-gray-600">
           <!-- Generazione automatica dei filtri -->
-          <a href="<?= Url::viewSoftware(0) ?>" class="transition-colors hover:text-gray-400">Sistema Operativo</a>
-          <a href="<?= Url::viewSoftware(1) ?>" class="transition-colors hover:text-gray-400">Grafica</a>
-          <a href="<?= Url::viewSoftware(2) ?>" class="transition-colors hover:text-gray-400">Giochi</a>
+          <a href="<?= Url::viewSoftware(0) ?>" class="transition-colors hover:text-gray-500">Sistema Operativo</a>
+          <a href="<?= Url::viewSoftware(1) ?>" class="transition-colors hover:text-gray-500">Grafica</a>
+          <a href="<?= Url::viewSoftware(2) ?>" class="transition-colors hover:text-gray-500">Giochi</a>
         </div>
         <p class="uppercase font-bold text-sm text-gray-500 mt-8">Professione clienti</p>
         <hr class="my-2" />
         <div class="flex flex-col gap-2 px-4 py-2 text-gray-600">
           <!-- Generazione automatica dei filtri -->
-          <a href="<?= Url::viewClienti(0) ?>" class="transition-colors hover:text-gray-400">Informatico</a>
-          <a href="<?= Url::viewClienti(1) ?>" class="transition-colors hover:text-gray-400">Studente</a>
-          <a href="<?= Url::viewClienti(2) ?>" class="transition-colors hover:text-gray-400">Altro</a>
+          <a href="<?= Url::viewClienti(0) ?>" class="transition-colors hover:text-gray-500">Informatico</a>
+          <a href="<?= Url::viewClienti(1) ?>" class="transition-colors hover:text-gray-500">Studente</a>
+          <a href="<?= Url::viewClienti(2) ?>" class="transition-colors hover:text-gray-500">Altro</a>
         </div>
       </div>
       <div class="col-span-4">
-        <div class="bg-gray-100 h-20">Elemento placeholder</div>
-        <div class="bg-gray-100 h-20">Elemento placeholder</div>
-        <div class="bg-gray-100 h-20">Elemento placeholder</div>
+        <?php // ciclo ?>
+          <div class="rounded-lg bg-gray-100 mb-6 p-8">Elemento placeholder</div>
+        <?php //fine ciclo ?>
       </div>
     </div>
-
-    <!-- Visualizzare l'elenco del software e un menu con le tipologie,
-      cliccando su una si filtra il contenuto. -->
   </div>
 </body>
 

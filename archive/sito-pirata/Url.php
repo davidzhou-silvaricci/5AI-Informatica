@@ -28,6 +28,8 @@ class Url
     public static function viewClienti($professione) {
         return self::HOME . "?professione=" . $professione;
     }
-}
 
-?>
+    public static function urlDelete($id) {
+        return self::HOME . "?delete=$id";
+    }
+}

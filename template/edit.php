@@ -61,7 +61,7 @@ include("components/my-header.php");
     </form>
 <?php else : ?>
     <div class="uk-card uk-card-default uk-card-body uk-margin uk-text-center">
-        <p>Nessun elemento da visualizzare</p>
+        <p>Nessun elemento da modificare</p>
         <a href="<?= Url::toHome() ?>" class="uk-button uk-button-default">Indietro</a>
     </div>
 <?php endif; ?>

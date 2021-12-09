@@ -28,7 +28,7 @@ include("components/my-header.php");
         <div class="uk-form-controls">
             <select class="uk-select" id="" name="" required>
                 <?php // foreach (Classe::COSTANTE as $k => $v) : ?>
-                    <option value=""><?= $obj->v ?></option>
+                    <option value=""><!-- $obj->v --></option>
                 <?php // endforeach; ?>
             </select>
         </div>

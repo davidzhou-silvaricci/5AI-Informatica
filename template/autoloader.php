@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 }
 
 spl_autoload_register(function ($class_name) {
-  include $class_name . '.php';
+  include "classes/" . $class_name . ".php";
 });
 
 ini_set('display_errors', 1);

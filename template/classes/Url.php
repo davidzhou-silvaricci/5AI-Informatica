@@ -28,7 +28,8 @@ class Url
         return self::VIEW . "?id=$id";
     }
 
-    public static function urlEdit($id) {
+    public static function urlEdit($id)
+    {
         return self::EDIT . "?id=$id";
     }
 

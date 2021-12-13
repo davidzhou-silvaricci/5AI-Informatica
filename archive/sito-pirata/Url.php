@@ -21,6 +21,14 @@ class Url
         return self::RESET;
     }
 
+    public static function viewSoftware($tipo) {
+        return self::HOME . "?tipo=" . $tipo;
+    }
+
+    public static function viewClienti($professione) {
+        return self::HOME . "?professione=" . $professione;
+    }
+
     public static function urlDelete($id) {
         return self::HOME . "?delete=$id";
     }

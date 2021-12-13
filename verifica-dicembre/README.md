@@ -5,12 +5,14 @@
 Un'impresa ha la necessità di tenere traccia di tutti gli interventi effettuati dai suoi due tecnici Mario e Luca.
 
 **Per ogni intervento bisogna tener traccia di:**
+
 - Tecnico che ha eseguito l'intervento [ Mario o Luca ]
 - Durata dell'intervento in ore
 - Parcella (cioè importo dell'intervento)
 - Nota dell'intervento effettuato
 
 **Il sistema informatico quindi deve permettere:**
+
 - L'inserimento di un nuovo intervento [20pt]
 - La visualizzazione in tabella dell'elenco degli interventi effettuati [15pt]
 - La pagina dettaglio dell'intervento [10pt]
@@ -19,6 +21,7 @@ Un'impresa ha la necessità di tenere traccia di tutti gli interventi effettuati
 - L'elenco degli interventi con importo maggiore di 1000 euro (prezzo iniziale non scontato) [10pt]
 
 **Bonus**:
+
 - Permettere la cancellazione di un intervento
 - Di tutti gli interventi di visualizzare solo gli interventi senza sconto
 

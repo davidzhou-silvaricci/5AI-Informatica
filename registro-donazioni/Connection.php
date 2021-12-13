@@ -4,7 +4,7 @@
 class Connection
 {
 
-    const DB = "registro-donazioni";
+    const DB = "my_registro_donazioni";
     const DB_HOST = "127.0.0.1";
     const DB_USER = "root";
     const DB_PASSWORD = "";

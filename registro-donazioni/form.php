@@ -19,15 +19,31 @@ include("autoloader.php");
     <div class="uk-container uk-container-xsmall uk-padding-large">
         <form method="POST" action="<?= Url::toHome() ?>" class="uk-form-horizontal uk-margin">
             <div class="uk-margin">
-                <label class="uk-form-label" for=""></label>
+                <label class="uk-form-label" for="importo">Importo (€)</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="" name="" type="text" required>
+                    <input class="uk-input" id="importo" name="importo" type="number" placeholder="1.00" min="1" step="0.01" required>
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for=""></label>
+                <label class="uk-form-label" for="ente">Ente destinatario</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="" name="" type="number" required>
+                    <select class="uk-select" id="ente" name="ente">
+                        <?php foreach (Donazione::ENTI as $k => $v) : ?>
+                            <option value="<?= $k ?>"><?= $v ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="anno">Anno della donazione</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="anno" name="anno" type="number" min="1970" max="<?= date("Y"); ?>" placeholder="<?= date("Y"); ?>" required>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="nota">Eventuale nota</label>
+                <div class="uk-form-controls">
+                    <textarea class="uk-textarea" rows="2" id="nota" name="nota" maxlength="100"></textarea>
                 </div>
             </div>
             <div class="uk-flex uk-flex-row uk-margin-medium">

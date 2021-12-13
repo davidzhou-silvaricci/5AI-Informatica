@@ -13,20 +13,20 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dump della struttura del database negozio-sportivo
-CREATE DATABASE IF NOT EXISTS `magazzino-sportivo` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
-USE `magazzino-sportivo`;
+-- Dump della struttura del database my_magazzino_sportivo
+CREATE DATABASE IF NOT EXISTS `my_magazzino_sportivo` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
+USE `my_magazzino_sportivo`;
 
--- Dump della struttura di tabella negozio-sportivo.articoli
+-- Dump della struttura di tabella my_magazzino_sportivo.articoli
 CREATE TABLE IF NOT EXISTS `articoli` (
-  `id_articolo` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) COLLATE armscii8_bin DEFAULT NULL,
   `quantita` int(11) DEFAULT NULL,
   `prezzo` float DEFAULT NULL,
-  PRIMARY KEY (`id_articolo`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dump dei dati della tabella negozio-sportivo.articoli: ~0 rows (circa)
+-- Dump dei dati della tabella my_magazzino_sportivo.articoli: ~0 rows (circa)
 /*!40000 ALTER TABLE `articoli` DISABLE KEYS */;
 /*!40000 ALTER TABLE `articoli` ENABLE KEYS */;
 

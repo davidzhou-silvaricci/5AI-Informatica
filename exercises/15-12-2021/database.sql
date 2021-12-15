@@ -36,7 +36,9 @@ CREATE TABLE IF NOT EXISTS `giocato` (
   `anno_campionato` year(4) DEFAULT NULL,
   `canestri` int(11) DEFAULT NULL,
   `presenze` int(11) DEFAULT NULL,
-  `numero` int(11) DEFAULT NULL
+  `numero` int(11) DEFAULT NULL,
+  KEY `nome_campionato` (`nome_campionato`) USING BTREE,
+  CONSTRAINT `nome_campionato` FOREIGN KEY (`nome_campionato`) REFERENCES `campionato` (`nome`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Dump dei dati della tabella my_basket.giocato: ~0 rows (circa)

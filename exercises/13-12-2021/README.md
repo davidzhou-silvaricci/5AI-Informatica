@@ -5,8 +5,8 @@
 **Realizzare in SQL le seguenti tabelle:**
 
 - Libro ( ISBN - Titolo - Descrizione - Numero di pagine - Costo - Data di uscita - Autore - Genere )
-- Autore ( id - Nome - Cognome - Data di nascita )
-- Genere ( id - Nome - Descrizione )
+- Autore ( ID - Nome - Cognome - Data di nascita )
+- Genere ( ID - Nome - Descrizione )
 
 Inserire per ogni tabella almeno 4 record.
 > [generatedata.com](https://generatedata.com/),

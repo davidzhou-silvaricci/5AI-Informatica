@@ -1,1 +1,1 @@
-![5AI-Informatica](banner.png)
+![5AI Informatica](banner.png)

@@ -2,82 +2,90 @@
 
 class Libri
 {
-    private $titolo;
-    private $descrizione;
-    private $isbn;
-    private $numeroPagine;
-    private $genere;
-    private $stato;
-    
-    const GENERIDISPONIBILI = ['inf'=>'Informatica','ita'=>'Italiano','fin'=>'Finanza','eco'=>'Economia'];
-    const STATIDISPONIBILI = [0=>'In prestito',1=>'Disponibile'];
-  
-    public function aggiungi($libro)
-    {
-      $this->titolo = $libro["titolo"];
-      $this->descrizione = $libro["descrizione"];
-      $this->isbn = $libro["isbn"];
-      $this->numeroPagine = $libro["numeroPagine"];
-      $this->genere = $libro["genere"];
-      $this->stato = $libro["stato"];
+  private $titolo;
+  private $descrizione;
+  private $isbn;
+  private $numeroPagine;
+  private $genere;
+  private $stato;
 
-      $this->salva();
-    }
+  const GENERIDISPONIBILI = ['inf' => 'Informatica', 'ita' => 'Italiano', 'fin' => 'Finanza', 'eco' => 'Economia'];
+  const STATIDISPONIBILI = [0 => 'In prestito', 1 => 'Disponibile'];
 
-    public function salva() {
-      $_SESSION["libri"][$this->isbn] = serialize($this);
-    }
+  public function aggiungi($libro)
+  {
+    $this->titolo = $libro["titolo"];
+    $this->descrizione = $libro["descrizione"];
+    $this->isbn = $libro["isbn"];
+    $this->numeroPagine = $libro["numeroPagine"];
+    $this->genere = $libro["genere"];
+    $this->stato = $libro["stato"];
 
-    public function svuota() {
-      unset($_SESSION["libri"]);
-    }
+    $this->salva();
+  }
 
-    public function modificaStato($stato) {
-      $this->stato = $stato;
-      $this->salva();
-    }
+  public function salva()
+  {
+    $_SESSION["libri"][$this->isbn] = serialize($this);
+  }
 
-    public function elimina($isbn) {
-      if(isset($_SESSION["libri"][$isbn]))
-        unset($_SESSION["libri"][$isbn]);
-    }
+  public function svuota()
+  {
+    unset($_SESSION["libri"]);
+  }
 
-    public function getIsbn() {
-      return $this->isbn;
-    }
+  public function modificaStato($stato)
+  {
+    $this->stato = $stato;
+    $this->salva();
+  }
 
-    public function getStato() {
-      return $this->stato;
-    }
+  public function elimina($isbn)
+  {
+    if (isset($_SESSION["libri"][$isbn]))
+      unset($_SESSION["libri"][$isbn]);
+  }
 
-    public function genereLabel() {
-      return $this->genere;
-    }
+  public function getIsbn()
+  {
+    return $this->isbn;
+  }
 
-    public function statoLabel() {
-      return $this->stato;
-    }
+  public function getStato()
+  {
+    return $this->stato;
+  }
 
-    // utilizzerò un template html
-    public function stampa()
-    {
+  public function genereLabel()
+  {
+    return $this->genere;
+  }
+
+  public function statoLabel()
+  {
+    return $this->stato;
+  }
+
+  // utilizzerò un template html
+  public function stampa()
+  {
 ?>
 
-        <div class="blog-post">
-            <div class="callout">
-              <h3><?= $this->titolo ?></h3>
-              <p><?= $this->isbn?></p>
-              <ul class="menu simple">
-                <li>Numero pagine: <?= $this->numeroPagine; ?></li>
-                <li>Stato: <?= $this->stato; ?></li>
-                <li>Genere: <?= $this->genere; ?></li>
-              </ul>
-              <p><?= $this->descrizione ?></p>
-              <br/>
-            <a href=<?="dettaglio.php?id=".$this->isbn?>>Modifica</a>
-            </div>
-        </div>
+    <div class="blog-post">
+      <div class="callout">
+        <h3><?= $this->titolo ?></h3>
+        <p><?= $this->isbn ?></p>
+        <ul class="menu simple">
+          <li>Numero pagine: <?= $this->numeroPagine; ?></li>
+          <li>Stato: <?= $this->stato; ?></li>
+          <li>Genere: <?= $this->genere; ?></li>
+        </ul>
+        <p><?= $this->descrizione ?></p>
+        <br />
+        <a href=<?= "dettaglio.php?id=" . $this->isbn ?>>Modifica</a>
+      </div>
+    </div>
 
 <?php
-    }
+  }
 }

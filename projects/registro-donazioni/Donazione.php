@@ -35,13 +35,10 @@ class Donazione
 
     public function getFilteredList($filter, $by)
     {
-        if ($by === "ente")
-        {
+        if ($by === "ente") {
             $sql = "SELECT * FROM donazioni WHERE ente = ?";
             $result = $this->connect($sql, "s", [$filter]);
-        }
-        else if ($by === "importo")
-        {
+        } else if ($by === "importo") {
             $sql = "SELECT * FROM donazioni WHERE importo > ?";
             $result = $this->connect($sql, "i", [$filter]);
         }

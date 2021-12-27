@@ -17,23 +17,28 @@ class Url
         return self::ADD;
     }
 
-    public static function urlView($id) {
+    public static function urlView($id)
+    {
         return self::VIEW . "?id=$id";
     }
 
-    public static function urlEditEnte($id, $ente) {
+    public static function urlEditEnte($id, $ente)
+    {
         return self::VIEW . "?id=$id&ente=$ente";
     }
 
-    public static function urlFilterEnte($ente) {
+    public static function urlFilterEnte($ente)
+    {
         return self::HOME . "?filter=$ente&by=ente";
     }
 
-    public static function urlFilterImporto($importo) {
+    public static function urlFilterImporto($importo)
+    {
         return self::HOME . "?filter=$importo&by=importo";
     }
 
-    public static function urlDelete($id) {
+    public static function urlDelete($id)
+    {
         return self::HOME . "?delete=$id";
     }
 }

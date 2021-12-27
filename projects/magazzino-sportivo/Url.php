@@ -18,7 +18,8 @@ class Url
         return self::ADD;
     }
 
-    public static function toRifornimento() {
+    public static function toRifornimento()
+    {
         return self::RIFORNIMENTO;
     }
 
@@ -27,17 +28,20 @@ class Url
         return self::RESET;
     }
 
-    public static function urlSell($id) {
+    public static function urlSell($id)
+    {
         return self::HOME . "?sell=$id";
     }
 
-    public static function urlUpdate($id, $redirect) {
-        if($redirect === true) $page = self::UPDATE;
+    public static function urlUpdate($id, $redirect)
+    {
+        if ($redirect === true) $page = self::UPDATE;
         else $page = self::RIFORNIMENTO;
         return $page . "?id=$id";
     }
 
-    public static function urlDelete($id) {
+    public static function urlDelete($id)
+    {
         return self::HOME . "?delete=$id";
     }
 }

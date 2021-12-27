@@ -22,27 +22,33 @@ class Url
         return self::RESET;
     }
 
-    public static function urlView($id) {
+    public static function urlView($id)
+    {
         return self::VIEW . "?id=$id";
     }
 
-    public static function urlSconta($id) {
+    public static function urlSconta($id)
+    {
         return self::HOME . "?sconta=$id";
     }
 
-    public static function urlDelete($id) {
+    public static function urlDelete($id)
+    {
         return self::HOME . "?delete=$id";
     }
 
-    public static function urlTecnico($tecnico) {
+    public static function urlTecnico($tecnico)
+    {
         return self::HOME . "?tecnico=$tecnico";
     }
 
-    public static function urlImporto() {
+    public static function urlImporto()
+    {
         return self::HOME . "?importo=";
     }
 
-    public static function urlSenzaSconto() {
+    public static function urlSenzaSconto()
+    {
         return self::HOME . "?nosconto=";
     }
 }

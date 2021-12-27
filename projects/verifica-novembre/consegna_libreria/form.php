@@ -3,13 +3,9 @@ include('autoloader.php');
 include('header.php');
 ?>
 
-
 <div class="row medium-8 large-7 columns">
-
   <div class="grid-x grid-padding-x">
     <div class="large-6 cell">
-
-
       <form action="index.php" method='POST' enctype="multipart/form-data">
         <label>Titolo</label>
         <input class='form-input' type="text" id="titolo" name="titolo">
@@ -44,7 +40,6 @@ include('header.php');
       </form>
     </div>
   </div>
-
 </div>
 </body>
 

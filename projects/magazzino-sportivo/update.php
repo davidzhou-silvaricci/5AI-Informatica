@@ -39,7 +39,7 @@ if (isset($_GET["id"]))
             <div class="uk-margin">
                 <label class="uk-form-label" for="prezzo">Prezzo (€)</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="prezzo" name="prezzo" type="number" value="<?= $obj->prezzo ?>"  min="0" step="0.01" disabled required>
+                    <input class="uk-input" id="prezzo" name="prezzo" type="number" value="<?= $obj->prezzo ?>" min="0" step="0.01" disabled required>
                 </div>
             </div>
             <div class="uk-flex uk-flex-row uk-margin-medium">

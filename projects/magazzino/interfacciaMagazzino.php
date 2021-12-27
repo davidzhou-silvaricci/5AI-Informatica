@@ -11,7 +11,7 @@ echo "<br> Aggiungi prodotto <a href='gestioneMagazzino.php'>Vedi magazzino</a> 
 
 ?>
 
-<form method="POST" action="<?= $_SERVER['PHP_SELF']?>">
+<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
     <label for="nome">Nome del prodotto</label><br />
     <input type="text" id="nome" name="nome"><br />
     <label for="descrizione">Descrizione</label><br />
@@ -21,16 +21,16 @@ echo "<br> Aggiungi prodotto <a href='gestioneMagazzino.php'>Vedi magazzino</a> 
 
 <?php
 
-if(isset($_POST['submit'])) {
-	// ATTENZIONE! In produzione non usare mai direttamente le variabili POST e GET
-	$prodotto['nome'] = $_POST['nome'];
-	$prodotto['descrizione'] = $_POST['descrizione'];
-	# $prodotto['quantità'] = $_POST['quantità'];
-	
-	// Salvo i dati nella sessione
-	$_SESSION['carrello'][] = $prodotto;	// lasciando la seconda quadra vuota, l'indice diventa progressivo
-	
-	echo "Il prodotto ".$_POST['nome'], " è stato salvato in magazzino.<br>";
+if (isset($_POST['submit'])) {
+    // ATTENZIONE! In produzione non usare mai direttamente le variabili POST e GET
+    $prodotto['nome'] = $_POST['nome'];
+    $prodotto['descrizione'] = $_POST['descrizione'];
+    # $prodotto['quantità'] = $_POST['quantità'];
+
+    // Salvo i dati nella sessione
+    $_SESSION['carrello'][] = $prodotto;    // lasciando la seconda quadra vuota, l'indice diventa progressivo
+
+    echo "Il prodotto " . $_POST['nome'], " è stato salvato in magazzino.<br>";
 }
 
 /*

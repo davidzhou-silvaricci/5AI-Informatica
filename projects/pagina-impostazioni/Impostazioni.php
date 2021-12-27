@@ -1,7 +1,7 @@
 <?php
 
-class Impostazioni {
-
+class Impostazioni
+{
   private $theme;
   private $mode;
   private $pages;
@@ -30,22 +30,35 @@ class Impostazioni {
       $this->deleteType = self::BASE["deleteType"];
       // E le salvo 
       $this->store();
-    }
-    else $this->load();
+    } else $this->load();
   }
 
   // Potrei usare i metodi magici di php __get in modo da poter poi usare direttamente $obj->theme etc.
-  public function getTheme() { return $this->theme; }
-  public function getMode() { return $this->mode; }
-  public function getPages() { return $this->pages; }
-  public function getDeleteType() { return $this->deleteType; }
+  public function getTheme()
+  {
+    return $this->theme;
+  }
+  public function getMode()
+  {
+    return $this->mode;
+  }
+  public function getPages()
+  {
+    return $this->pages;
+  }
+  public function getDeleteType()
+  {
+    return $this->deleteType;
+  }
 
-  public function setTheme($theme) {
+  public function setTheme($theme)
+  {
     $this->theme = $theme;
   }
 
   // Per il tema aggiungo un metodo get per avere il nome leggibile del tema
-  public function getThemeName() {
+  public function getThemeName()
+  {
     return self::THEMES[$this->theme];
   }
 
@@ -65,7 +78,7 @@ class Impostazioni {
     $tmp = unserialize($_SESSION[self::SETTINGS]);
     $this->theme = $tmp->theme;
     $this->mode = $tmp->mode;
-    $this->pages = $tmp->pages ;
+    $this->pages = $tmp->pages;
     $this->deleteType = $tmp->deleteType;
   }
 
@@ -75,12 +88,13 @@ class Impostazioni {
     $_SESSION[self::SETTINGS] = serialize($this);
     return "Impostazioni salvate.";
   }
-  
+
   // Cancello la sessione
-  public static function reset() {
+  public static function reset()
+  {
     // Cancello tutti i dati della sessione, non solo le impostazioni.
     session_unset();
-    
+
     return "Impostazioni reimpostate.";
   }
 }

@@ -7,7 +7,7 @@ $donazione = new Donazione();
 if (isset($_POST["submit"]))
     $donazione->add($_POST);
 
-if(isset($_GET["filter"]) && isset($_GET["by"]))
+if (isset($_GET["filter"]) && isset($_GET["by"]))
     $lista = $donazione->getFilteredList($_GET["filter"], $_GET["by"]);
 else $lista = Donazione::getDonazioni();
 

@@ -34,8 +34,8 @@
     },
     {
       "type": "text",
-      "version": 78,
-      "versionNonce": 1522150832,
+      "version": 81,
+      "versionNonce": 1089942671,
       "isDeleted": false,
       "id": "utXGTboMKk7Yq1EIMnmnk",
       "fillStyle": "hachure",
@@ -48,8 +48,8 @@
       "y": 242,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 240.92000000000002,
-      "height": 97.14516129032258,
+      "width": 240,
+      "height": 98,
       "seed": 1565022059,
       "groupIds": [],
       "strokeSharpness": "sharp",
@@ -60,7 +60,7 @@
       "fontSize": 77.71612903225805,
       "fontFamily": 1,
       "text": "CRUD",
-      "baseline": 68.14516129032258,
+      "baseline": 69,
       "textAlign": "left",
       "verticalAlign": "top"
     },
@@ -1697,7 +1697,7 @@
     }
   ],
   "appState": {
-    "viewBackgroundColor": "#ffffff",
+    "viewBackgroundColor": "#fff4e6",
     "gridSize": null,
     "scrollX": 0,
     "scrollY": 0,

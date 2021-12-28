@@ -4,7 +4,9 @@ i dati possono essere salvati, con i cookie, le sessioni, i file, i database. L'
 
 <?php
 
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 echo '<pre>';
 echo "<br> Aggiungi prodotto <a href='gestioneMagazzino.php'>Vedi magazzino</a> <hr>";

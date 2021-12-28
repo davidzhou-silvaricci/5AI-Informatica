@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) {
+	session_start();
+}
 
 echo '<pre>';
 echo "<br> Magazzino <a href='interfacciaMagazzino.php'>Aggiungi prodotto</a> <hr>";

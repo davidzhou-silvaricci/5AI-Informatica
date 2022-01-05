@@ -90,6 +90,6 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
 	FROM partecipazione p, Dipendente d, Intervento i
 	WHERE p.dipendente = d.codice_dipendente
 	AND p.intervento = i.codice_intervento
-	AND MONTH(i.data_inizio) = "gennaio
+	AND MONTH(i.data_inizio) = "gennaio"
 	```
 	

@@ -2,7 +2,7 @@
 
 # Esercizio per le vacanze natalizie
 
-## *Relazione gestionale ditta Baselli*
+**Relazione gestionale ditta Baselli**
 
 Il gestionale richiesto ha lo scopo di gestire i vari interventi (= task, es. installazione antenna) che vengono effettuati presso i clienti dalla ditta Baselli, la quale fornisce assistenza elettrica.
 
@@ -29,8 +29,6 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
   - Elenco dei rapportini di un determinato task
   - Calcolo delle ore prestate da un determinato dipendente in un mese indicato
   - Calcolo dello stipendio di un determinato dipendente in un mese specifico.
-
----
 
 ## Svolgimento
 

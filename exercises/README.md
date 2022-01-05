@@ -12,3 +12,4 @@
 
 6. [Biblioteca](https://github.com/dddddavid02/5AI-Informatica/tree/main/exercises/13-12-2021)
 7. [Basket](https://github.com/dddddavid02/5AI-Informatica/tree/main/exercises/15-12-2021)
+8. [Ditta Baselli](https://github.com/dddddavid02/5AI-Informatica/tree/main/exercises/22-12-2021)

@@ -31,7 +31,7 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
   - Calcolo delle ore prestate da un determinato dipendente in un mese indicato
   - Calcolo dello stipendio di un determinato dipendente in un mese specifico.
 
-## Svolgimento
+# Svolgimento
 
 ### Modello concettuale
 

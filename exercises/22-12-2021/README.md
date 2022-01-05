@@ -52,7 +52,7 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
   - con v.i.r. di intervento con Intervento (codice_intervento)
   - con v.i.r. di dipendente con Dipendente (codice_dipendente)
 - utilizzo (<ins>intervento</ins>, <ins>materiale</ins>)
-  - con v.i.r. di internento con Intervento (codice_intervento)
+  - con v.i.r. di intervento con Intervento (codice_intervento)
   - con v.i.r. di materiale con Materiale (codice_materiale)
 
 ### [Modello fisico](my_ditta_baselli.sql)

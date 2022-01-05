@@ -13,6 +13,7 @@ Per ogni **dipendente** si devono conoscere, oltre ai dati anagrafici, la mansio
 Per ogni task, alla conclusione di ogni intervento di un singolo dipendente, viene redatto un **rapportino** riportante, oltre al task, i materiali usati e le ore di lavoro.
 
 Relativamente ai **materiali**, interessano il fornitore, il tipo, il prezzo di acquisto, il prezzo proposto ai clienti e il deposito in magazzino.
+
 Di seguito le funzioni richieste:
 - Creazione/elmininazione/modifica dei task che vanno poi assegnati ai dipendenti. Qui si assegnano i dipendenti coinvolti ed il cliente associato al lavoro.
 - Creazione/eliminazione/modifica dei rapportini di ogni singolo intervento con l’inserimento dei materiali utilizzati (con quantità). Il rapportino è associato al task, quindi va selezionato a quale task fa riferimento.

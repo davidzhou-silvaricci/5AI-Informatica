@@ -64,7 +64,7 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
 	```sql
 	SELECT *
 	FROM Intervento
-	WHERE YEAR(data_inizio) = "2021"
+	WHERE YEAR(data_inizio) = 2021;
 	```
 
   - Elenco dei rapportini di un determinato task:
@@ -72,7 +72,7 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
 	```sql
 	SELECT *
 	FROM Rapportino
-	WHERE codice_rapportino = 1
+	WHERE codice_rapportino = 1;
 	```
 	
   - Calcolo delle ore prestate da un determinato dipendente in un mese indicato:
@@ -81,16 +81,16 @@ Dal task, poi sarà possibile generare la fattura, andando a leggere tutti i rap
 	SELECT SUM(p.ore) ore_totali
 	FROM partecipazione p, Intervento i
 	WHERE p.intervento = i.codice_intervento
-	AND MONTH(i.data_inizio) = "gennaio"
+	AND MONTH(i.data_inizio) = 1;
 	```
 	
   - Calcolo dello stipendio di un determinato dipendente in un mese specifico:
 	
 	```sql
-	SELECT (p.ore * d.costo_orario) stipendio_mensile
+	SELECT SUM(p.ore * d.costo_orario) stipendio_mensile
 	FROM partecipazione p, Dipendente d, Intervento i
 	WHERE p.dipendente = d.codice_dipendente
 	AND p.intervento = i.codice_intervento
-	AND MONTH(i.data_inizio) = "gennaio"
+	AND MONTH(i.data_inizio) = 1;
 	```
 	

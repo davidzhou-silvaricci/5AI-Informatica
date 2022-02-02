@@ -22,7 +22,7 @@ Dopo aver disegnato il modello E-R rispondere alle seguenti interrogazioni:
 
 2. Visualizzare nome e cognome di chi ha scritto “ZANNA BIANCA”
 
-    > Aggiungere con ALTER la colonna ***titolo***.
+    > Aggiungere con ALTER la colonna ***titolo***.  
     > `ALTER TABLE libro ADD titolo varchar(50)`
 
     ```sql

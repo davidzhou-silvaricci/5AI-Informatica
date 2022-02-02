@@ -15,3 +15,4 @@
 8. [Ditta Baselli](22-12-2021)
 9. [Supermercato](12-01-2022)
 10. [Cinema](17-01-2022)
+11. [Libreria](02-02-2022)

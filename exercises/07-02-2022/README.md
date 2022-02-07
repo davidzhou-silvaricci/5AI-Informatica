@@ -5,9 +5,9 @@
 # Esercizio
 
 ```sql
-CREATE DATABASE my_libreria DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin;
+CREATE DATABASE my_libro_editore DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin;
 
-USE my_libreria;
+USE my_libro_editore;
 
 CREATE TABLE libro (
     isbn CHAR(14) PRIMARY KEY,

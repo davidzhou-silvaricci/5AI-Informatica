@@ -16,3 +16,4 @@
 9. [Supermercato](12-01-2022)
 10. [Cinema](17-01-2022)
 11. [Libreria](02-02-2022)
+12. [Libro - Editore](07-02-2022)

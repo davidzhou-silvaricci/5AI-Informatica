@@ -18,4 +18,4 @@
 11. [Libreria](02-02-2022)
 12. [Libro - Editore](07-02-2022)
 13. [Gestione alberghi](14-02-2022)
-14. [](21-02-2022)
+14. [Associazione GAIT](21-02-2022)

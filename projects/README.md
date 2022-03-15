@@ -13,3 +13,4 @@
 8. [Magazzino sportivo](magazzino-sportivo)
 9.  [Registro donazioni](registro-donazioni)
 10. [Verifica di dicembre](verifica-dicembre)
+11. [Registrazione e login](login)

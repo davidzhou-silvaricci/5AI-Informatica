@@ -2,23 +2,36 @@
 
 include("autoloader.php");
 
-$title = "Registrazione utente";
+$title = "Registrazione - Sito";
 include("components/my-header.php");
 
+if(isset($_SESSION["username"])) {
+    header("Location: " . Url::toHome());
+    die();
+}
+
 $login = new Login();
-$msg = "";
+$error = null;
+
 if(isset($_POST["submit"]))
-    $msg = $login->registrazione($_POST);
+{
+    $error = $login->registrazione($_POST);
+
+    if($error === false) {
+        header("Location: " . Url::toLogin());
+        die();
+    }
+}
 
 ?>
 
 <h3>Registrazione</h3>
 
 <form method="POST" action="<?= Url::toRegistrazione() ?>" class="uk-form-horizontal uk-margin">
-    <?php if($msg !== ""): ?>
-        <div class="<?= ($msg === "Registrazione effettuata.") ? "uk-alert-success" : "uk-alert-warning" ?>" uk-alert>
+    <?php if($error): ?>
+        <div class="uk-alert-danger" uk-alert>
             <a class="uk-alert-close" uk-close></a>
-            <p><?=$msg?></p>
+            <p>L'username esiste già.</p>
         </div>
     <?php endif; ?>
     <div class="uk-margin">

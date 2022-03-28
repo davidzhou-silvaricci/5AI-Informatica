@@ -2,7 +2,7 @@
 
 class Connection
 {
-    const DB = "my_login";
+    const DB = "my_registrazione_utente";
     const DB_HOST = "127.0.0.1";
     const DB_USER = "root";
     const DB_PASSWORD = "";

@@ -20,4 +20,9 @@ class Url
     {
         return self::LOGIN;
     }
+
+    public static function toLogout()
+    {
+        return self::HOME . "?logout=";
+    }
 }

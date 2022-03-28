@@ -50,8 +50,9 @@
 	SELECT e.nome, s.descrizione, e.quantita
 	FROM Esemplare e, Specie s
     WHERE e.specie_nome = s.nome
-    AND s.ubicazione = "interno"
-    AND costo;
+    AND e.tipo = "interno"
+    AND costo = SELECT MIN(costo)
+				FROM Esemplare;
 	```
 
 6. Riportare nome degli interventi richiesti non ancora evasi con il nome e il telefono del richiedente.

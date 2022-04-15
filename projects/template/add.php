@@ -47,4 +47,4 @@ include("components/my-header.php");
     </div>
 </form>
 
-<?= include("components/my-footer.php") ?>
+<?php include("components/my-footer.php") ?>

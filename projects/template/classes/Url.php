@@ -23,17 +23,17 @@ class Url
         return self::RESET;
     }
 
-    public static function urlView($id)
+    public static function view($id)
     {
         return self::VIEW . "?id=$id";
     }
 
-    public static function urlEdit($id)
+    public static function edit($id)
     {
         return self::EDIT . "?id=$id";
     }
 
-    public static function urlDelete($id)
+    public static function delete($id)
     {
         return self::HOME . "?delete=$id";
     }

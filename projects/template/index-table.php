@@ -53,4 +53,4 @@ include("components/my-header.php");
     </div>
 <?php endif; ?>
 
-<?= include("components/my-footer.php") ?>
+<?php include("components/my-footer.php") ?>

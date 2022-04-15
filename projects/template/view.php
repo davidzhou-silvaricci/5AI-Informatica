@@ -30,4 +30,4 @@ include("components/my-header.php");
         <a href="<?= Url::toHome() ?>" class="uk-button uk-button-default">Indietro</a>
     </div>
 
-<?= include("components/my-footer.php") ?>
+<?php include("components/my-footer.php") ?>

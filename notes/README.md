@@ -6,3 +6,4 @@
 4. [Ripasso delle dichiarazioni SQL](07-02-2022.md)  
    [Versione alternativa](07-02-2022_2.md)
 5. [Registrazione e login](14-03-2022.md)
+6. [Controllo degli input](09-05-2022.md)

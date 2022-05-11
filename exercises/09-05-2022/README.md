@@ -28,6 +28,20 @@
         JOIN biciclette b ON p.id_produttore = b.id_produttore
         WHERE b.categoria = 'tandem');
     ```
+    
+    ---
+    
+    **Correzione**
+    
+    ```sql
+    SELECT nome
+    FROM biciclette
+    WHERE id_produttore IN
+        -- Elenco dei produttori che hanno fatto almeno un modello tandem
+        (SELECT DISTINCT id_produttore
+        FROM biciclette
+        WHERE categoria = 'tandem');
+    ```
 
 3. Indicazione della categoria di bicicletta che è stata realizzata in numero maggiore rispetto a tutte le altre.
 
@@ -42,6 +56,18 @@
     FROM biciclette
     GROUP BY categoria
     HAVING SUM(quantità) =
+        (SELECT MAX(totale)
+        FROM Somma);
+    ```
+    
+    ---
+    
+    **Correzione**
+    
+    ```sql
+    SELECT categoria
+    FROM Somma
+    WHERE totale =
         (SELECT MAX(totale)
         FROM Somma);
     ```
@@ -82,6 +108,18 @@
         (SELECT id_produttore
         FROM produttori
         WHERE data_fondazione > 1940);
+    ```
+    
+    ---
+    
+    **Correzione/alternativa**
+    
+    ```sql
+    SELECT AVG(b.quantità)
+    FROM biciclette b
+    JOIN produttori p ON b.id_produttore = p.id_produttore
+    WHERE b.categoria = 'corsa'
+    AND p.data_fondazione > 1940;
     ```
 
 7. Creare uno script PHP per eseguire le query 2 e 3 dove "tandem" e "corsa" sono presi in input.

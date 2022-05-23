@@ -7,11 +7,11 @@
 # Program Version 5.5.282
 #
 # OPTIONS:
-#   sourcefilename=C:/Users/Utente/Downloads/DATABASE/8339_CD-Rom/UA3 SQL/biciclette.mdb
+#   sourcefilename=C:/Users/Utente/Downloads/DATABASE/8339_CD-Rom/UA3 SQL/my_biciclette.mdb
 #   sourceusername=
 #   sourcepassword=
 #   sourcesystemdatabase=
-#   destinationdatabase=BICICLETTE
+#   destinationdatabase=my_biciclette
 #   storageengine=MyISAM
 #   dropdatabase=1
 #   createtables=1
